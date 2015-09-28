@@ -15,7 +15,7 @@
 -define(SLOT_TIMEOUT, 600000). % 10 minutes.
 -define(PROCNAME, ?MODULE).
 -define(URL_ENC(URL), binary_to_list(ejabberd_http:url_encode(URL))).
--define(ADDR_TO_STR(IP), ejabberd_config:may_hide_data(jlib:ip_to_list(IP))).
+-define(ADDR_TO_STR(IP), jlib:ip_to_list(IP)).
 -define(STR_TO_INT(Str, B), jlib:binary_to_integer(iolist_to_binary(Str), B)).
 -define(DEFAULT_CONTENT_TYPE, <<"application/octet-stream">>).
 -define(CONTENT_TYPES,
